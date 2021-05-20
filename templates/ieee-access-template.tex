@@ -1,0 +1,123 @@
+\documentclass{ieeeaccess}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[htt]{hyphenat}
+\usepackage{subfig}  % support sub-figure
+
+% compiler error without following two lines
+\usepackage{caption,setspace}
+\captionsetup{font={sf,small,stretch=0.80},labelfont={bf,color=accessblue}}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\makeatletter
+\newlength{\trianglerightwidth}
+\settowidth{\trianglerightwidth}{$$\triangleright$$~}
+\algnewcommand{\LineComment}[1]{\Statex \hskip\ALG@thistlm $$\triangleright$$ #1}
+\algnewcommand{\LineCommentCont}[1]{\Statex \hskip\ALG@thistlm%
+  \parbox[t]{\dimexpr\linewidth-\ALG@thistlm}{\hangindent=\trianglerightwidth \hangafter=1 \strut$$\triangleright$$ #1\strut}}
+\makeatother
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+	{% don't indent paragraphs
+	\setlength{\parindent}{0pt}
+	% turn on hanging indent if param 1 is 1
+	\ifodd #1
+	\let\oldpar\par
+	\def\par{\hangindent=\cslhangindent\oldpar}
+	\fi
+	% set entry spacing
+	\ifnum #2 > 0
+	\setlength{\parskip}{#2\baselineskip}
+	\fi
+	}%
+	{}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+\begin{document}
+\history{Date of publication $dates.publication$, date of current version $dates.currentVersion$.}
+$if(doi)$
+\doi{$doi$}
+$endif$
+
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+
+\author{
+$for(author)$
+\uppercase{$author.name$} $if(author.key)$ \authorrefmark{$author.key$} $endif$ $if(author.ieeeMembership)$, \IEEEmembership{$author.ieeeMembership$} $endif$ $sep$ ,
+$endfor$
+}
+
+$for(author)$
+$if(author.key)$
+\address[$author.key$]{
+	$if(author.institution)$ $author.institution$ $endif$,
+	$if(author.city)$ $author.city$ $endif$,
+	$if(author.address)$ $author.address$ $endif$
+	$if(author.email)$ (email: $author.email$) $endif$
+}
+$endif$
+$endfor$
+
+$endif$
+
+$if(support)$ \tfootnote{$support$} $endif$
+
+
+$if(correspondingAuthor)$ \corresp{Corresponding author:$correspondingAuthor.name$ (email: $correspondingAuthor.email$).} $endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(keywords)$
+\begin{keywords}
+$for(keywords)$
+	$keywords$ $sep$,
+$endfor$
+\end{keywords}
+$endif$
+
+\titlepgskip=-15pt
+\maketitle
+
+$body$
+
+\bibliographystyle{plain} 
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+
+$for(author)$
+$if(author.bio)$
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{$author.photo$}}] 
+	{$author.name$} $author.bio$
+\end{IEEEbiography}
+$endif$
+$endfor$
+
+\EOD
+
+\end{document}

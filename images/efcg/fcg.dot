@@ -1,0 +1,140 @@
+# Example of a directed graph.
+# Click "next example" button for more examples.
+# "digraph" is the default graph type.
+
+# Attributes in here apply to the graph itself.
+pad="1"
+outputorder=edgesfirst
+bgcolor=transparent
+
+# layout= specifies a layout engine:
+#   circo — for circular layout of graphs
+#   dot — for drawing directed graphs (the default)
+#   fdp — for drawing undirected graphs
+#   neato — for drawing undirected graphs
+#   osage — for drawing large undirected graphs
+#   twopi — for radial layouts of graphs
+layout=dot
+rankdir=TB
+#layout=dot
+#layout=twopi
+
+# Default node attributes
+node [
+  shape = circle
+  style="filled,bold"
+  color=black
+  fillcolor="#F2F2F2"
+  fontname=Inter
+]
+
+# Uncomment this to hide labels
+#node [ label="" ]
+
+# Uncomment this to arrange nodes in a grid
+#layout=osage  edge [style=invis]
+
+# Edges
+api_0	 [label=00 shape=diamond fillcolor="#deb618" name="Landroid/location/LocationListener; onLocationChanged (Landroid/location/Location;)V",
+type=api];
+user_0	 [label=20 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity$1; onLocationChanged (Landroid/location/Location;)V",
+type=user];
+api_0 -> user_0	 [type=api_parent_of style=dashed color=blue];
+api_1	 [label=01 shape=diamond fillcolor="#deb618" name="Landroid/view/View$OnClickListener; onClick (Landroid/view/View;)V",
+type=api];
+user_1	 [label=22 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity$2; onClick (Landroid/view/View;)V",
+type=user];
+api_1 -> user_1	 [type=api_parent_of style=dashed color=blue];
+api_2	 [label=02 shape=diamond fillcolor="#deb618" name="Landroid/app/Activity; <init> ()V",
+type=api];
+user_2	 [label=24 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity; <init> ()V",
+type=user];
+api_2 -> user_2	 [type=api_parent_of style=dashed color=blue];
+api_3	 [label=03 shape=diamond fillcolor="#deb618" name="Landroid/app/Activity; onCreate (Landroid/os/Bundle;)V",
+type=api];
+user_3	 [label=27 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity; onCreate (Landroid/os/Bundle;)V",
+type=user];
+api_3 -> user_3	 [type=api_parent_of style=dashed color=blue];
+api_4	 [label=04 shape=diamond fillcolor="#deb618" name="Ljava/lang/Boolean; parseBoolean (Ljava/lang/String;)Z",
+type=api];
+api_5	 [label=05 shape=diamond fillcolor="#deb618" name="Ljava/lang/Object; <init> ()V",
+type=api];
+api_6	 [label=08 shape=diamond fillcolor="#deb618" name="Ljava/lang/Double; valueOf (D)Ljava/lang/Double;",
+type=api];
+api_7	 [label=07 shape=diamond fillcolor="#deb618" name="Ljava/lang/String; format (Ljava/lang/String; [Ljava/lang/Object;)Ljava/lang/String;",
+type=api];
+api_8	 [label=10 shape=diamond fillcolor="#deb618" name="Landroid/location/Location; getLatitude ()D",
+type=api];
+api_9	 [label=06 shape=diamond fillcolor="#deb618"  name="Landroid/widget/TextView; setText (Ljava/lang/CharSequence;)V",
+type=api];
+api_10	 [label=09 shape=diamond fillcolor="#deb618" name="Landroid/location/Location; getLongitude ()D",
+type=api];
+api_11	 [label=12 shape=diamond fillcolor="#deb618" name="Ljava/lang/Exception; toString ()Ljava/lang/String;",
+type=api];
+api_12	 [label=11 shape=diamond fillcolor="#deb618" name="Lorg/viyk/demoappjava/MainActivity; checkSelfPermission (Ljava/lang/String;)I",
+type=api];
+api_13	 [label=13 shape=diamond fillcolor="#deb618" name="Landroid/location/LocationManager; requestLocationUpdates (Ljava/lang/String; J F Landroid/location/LocationListener;)V",
+type=api];
+api_13 -> api_0	 [type=calls_back color=red style=bold];
+api_18	 [label=18 shape=diamond fillcolor="#deb618" name="Landroid/location/LocationListener; onProviderDisabled (Ljava/lang/String;)V",
+type=api];
+api_13 -> api_18	 [type=calls_back color=red style=bold];
+api_19	 [label=19 shape=diamond fillcolor="#deb618" name="Landroid/location/LocationListener; onProviderEnabled (Ljava/lang/String;)V",
+type=api];
+api_13 -> api_19	 [type=calls_back color=red style=bold];
+permission_0	 [label=31 shape=square fillcolor="#ff73c4" name="android.permission.ACCESS_COARSE_LOCATION",
+type=permission];
+api_13 -> permission_0	 [type=uses color="#007820"];
+permission_1	 [label=32 shape=square fillcolor="#ff73c4" name="android.permission.ACCESS_FINE_LOCATION",
+type=permission];
+api_13 -> permission_1	 [type=uses color="#007820"];
+api_14	 [label=16 shape=diamond fillcolor="#deb618" name="Lorg/viyk/demoappjava/MainActivity; findViewById (I)Landroid/view/View;",
+type=api];
+api_15	 [label=14 shape=diamond fillcolor="#deb618" name="Lorg/viyk/demoappjava/MainActivity; setContentView (I)V",
+type=api];
+api_16	 [label=15 shape=diamond fillcolor="#deb618" name="Lorg/viyk/demoappjava/MainActivity; getSystemService (Ljava/lang/String;)Ljava/lang/Object;",
+type=api];
+api_17	 [label=17 shape=diamond fillcolor="#deb618" name="Landroid/widget/Button; setOnClickListener (Landroid/view/View$OnClickListener;)V",
+type=api];
+api_17 -> api_1	 [type=calls_back color=red style=bold];
+user_0 -> api_6	 [type=invokes_api];
+user_0 -> api_7	 [type=invokes_api];
+user_0 -> api_8	 [type=invokes_api];
+user_0 -> api_9	 [type=invokes_api];
+user_0 -> api_10	 [type=invokes_api];
+user_7	 [label=21 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity; access$000 (Lorg/viyk/demoappjava/MainActivity;)Landroid/widget/TextView;",
+type=user];
+user_0 -> user_7	 [type=invokes];
+user_1 -> api_9	 [type=invokes_api];
+user_1 -> api_11	 [type=invokes_api];
+user_1 -> api_12	 [type=invokes_api];
+user_1 -> api_13	 [type=invokes_api];
+user_1 -> user_7	 [type=invokes];
+user_9	 [label=30 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity; access$100 (Lorg/viyk/demoappjava/MainActivity;)Landroid/location/LocationListener;",
+type=user];
+user_1 -> user_9	 [type=invokes];
+user_10	 [label=23 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity; access$200 (Lorg/viyk/demoappjava/MainActivity;)Landroid/location/LocationManager;",
+type=user];
+user_1 -> user_10	 [type=invokes];
+user_2 -> api_2	 [type=invokes_api];
+user_6	 [label=25 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity$1; <init> (Lorg/viyk/demoappjava/MainActivity;)V",
+type=user];
+user_2 -> user_6	 [type=invokes];
+user_8	 [label=26 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/MainActivity$2; <init> (Lorg/viyk/demoappjava/MainActivity;)V",
+type=user];
+user_2 -> user_8	 [type=invokes];
+user_3 -> api_3	 [type=invokes_api];
+user_3 -> api_14	 [type=invokes_api];
+user_3 -> api_15	 [type=invokes_api];
+user_3 -> api_16	 [type=invokes_api];
+user_3 -> api_17	 [type=invokes_api];
+user_4	 [label=28 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/BuildConfig; <clinit> ()V",
+type=user];
+user_4 -> api_4	 [type=invokes_api];
+user_5	 [label=29 fillcolor="#18b0de" name="Lorg/viyk/demoappjava/BuildConfig; <init> ()V",
+type=user];
+user_5 -> api_5	 [type=invokes_api];
+user_6 -> api_5	 [type=invokes_api];
+user_8 -> api_5	 [type=invokes_api];
+
+
