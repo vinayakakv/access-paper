@@ -126,8 +126,6 @@
   year   = {2021},
 }
 
-
-
 @InProceedings{Cao2015,
   author       = {Yinzhi Cao and Yanick Fratantonio and Antonio Bianchi and Manuel Egele and Christopher Kruegel and Giovanni Vigna and Yan Chen},
   booktitle    = {22nd Annual Network and Distributed System Security Symposium, {NDSS} 2015, San Diego, California, USA, February 8-11, 2015},
@@ -257,13 +255,12 @@
 }
 
 @Book{Levin2021,
- author = {Levin, Oscar},
- title = {Discrete mathematics : an open introduction},
- publisher = {Oscar Levin},
- year = {2019},
- address = {Greeley, Colorado},
- isbn = {978-1792901690}
- }
+  author  = {Oscar Levin},
+  title   = {Discrete mathematics: An open introduction},
+  year    = {2021},
+  edition = {Third},
+  isbn    = {978-1792901690},
+}
 
 @InProceedings{Zhang2019,
   author    = {Zhang, Chuxu and Song, Dongjin and Huang, Chao and Swami, Ananthram and Chawla, Nitesh V.},
@@ -326,25 +323,19 @@
 }
 
 @Article{Falcon2019,
-  title={PyTorch Lightning},
-  author={William {Falcon et al.}},
-  journal={GitHub. Note: https://github.com/PyTorchLightning/pytorch-lightning},
-  volume={3},
-  year={2019}
+  author  = {Falcon, WA, et al.},
+  journal = {GitHub. Note: https://github.com/PyTorchLightning/pytorch-lightning},
+  title   = {{PyTorch Lightning}},
+  year    = {2019},
+  volume  = {3},
 }
 
 @Misc{Biewald2020,
   author = {Biewald, Lukas},
-  note   = {Software available from https://wandb.ai/site},
+  note   = {Software available from wandb.com},
   title  = {Experiment Tracking with Weights and Biases},
   year   = {2020},
-}
-
-@Misc{Gabor2020,
-    author = "{Gabor Paller}",
-    title = "Dalvik opcodes",
-    year = "2020",
-    note  = "URL: http://pallergabor.uw.hu/androidblog/dalvik\_opcodes.html (accessed: 07.12.2020)",
+  url    = {https://www.wandb.com/},
 }
 
 @InProceedings{Allix2016,
@@ -376,14 +367,16 @@
   groups    = {Datasets},
 }
 
-@inproceedings{Arp2014,
-  doi = {10.14722/ndss.2014.23247},
-  url = {https://doi.org/10.14722/ndss.2014.23247},
-  year = {2014},
-  publisher = {Internet Society},
-  author = {Daniel Arp and Michael Spreitzenbarth and Malte H\"{u}bner and Hugo Gascon and Konrad Rieck},
-  title = {Drebin: Effective and Explainable Detection of Android Malware in Your Pocket},
-  booktitle = {Proceedings 2014 Network and Distributed System Security Symposium}
+@Article{Arp2014,
+  author   = {Arp, Daniel and Spreitzenbarth, Michael and H{\"{u}}bner, Malte and Gascon, Hugo and Rieck, Konrad},
+  title    = {{Drebin: Effective and Explainable Detection of Android Malware in Your Pocket}},
+  doi      = {10.14722/ndss.2014.23247},
+  number   = {August},
+  abstract = {{\#}Drebin. They do lightweight static analysis. Pretty fast (10 secs/app), and they explain their detection results. Detection: 94{\%}. FP: 1{\%}. Bunch of features: hardware components, requested permissions, app components, filtered intents, restricted API calls (for which permission is required, but the app doesn't. maybe it has a root exploit), used permissions, suspicious API calls, network addresses.},
+  file     = {:home/itadmin/Downloads/papers/2014-ndss.pdf:pdf},
+  groups   = {Manifest, Datasets},
+  isbn     = {1891562355},
+  year     = {2014},
 }
 
 @Article{Ren2020,

@@ -21,10 +21,9 @@ rankdir=TB
 
 # Default node attributes
 node [
-  shape = circle
-  style="filled,bold"
+  shape = oval
+  style="bold"
   color=black
-  fillcolor="#F2F2F2"
   fontname=Inter
 ]
 
@@ -35,59 +34,47 @@ node [
 #layout=osage  edge [style=invis]
 
 # Edges
-api_0	 [label=A name="Landroid/location/LocationListener;",
-type=api shape=diamond fillcolor="#deb618"];
-api_9	 [label=B name="Landroid/location/LocationManager;",
-type=api shape=diamond fillcolor="#deb618"];
+api_0	 [label="LocationListener" name="Landroid/location/LocationListener;",
+type=api shape=rect fillcolor="#deb618"];
+api_9	 [label="LocationManager" name="Landroid/location/LocationManager;",
+type=api shape=rect fillcolor="#deb618"];
 
-user_0	 [label=C name="Lorg/viyk/demoappjava/MainActivity$1;",
+user_0	 [label="MainActivity$1" name="Lorg/viyk/demoappjava/MainActivity$1;",
 type=user fillcolor="#18b0de"];
 api_0 -> user_0	 [type=api_parent_of style=dashed color=blue];
-api_1	 [label=D name="Landroid/view/View$OnClickListener;",
-type=api shape=diamond fillcolor="#deb618"];
-api_11	 [label=E name="Landroid/widget/Button;",
-type=api shape=diamond fillcolor="#deb618"];
+api_1	 [label="View$OnClickListener" name="Landroid/view/View$OnClickListener;",
+type=api shape=rect fillcolor="#deb618"];
+api_11	 [label="Button" name="Landroid/widget/Button;",
+type=api shape=rect fillcolor="#deb618"];
 
-user_1	 [label=F name="Lorg/viyk/demoappjava/MainActivity$2;",
+user_1	 [label="MainActivity$2" name="Lorg/viyk/demoappjava/MainActivity$2;",
 type=user fillcolor="#18b0de"];
 api_1 -> user_1	 [type=api_parent_of style=dashed color=blue];
-api_2	 [label=G name="Landroid/app/Activity;",
-type=api shape=diamond fillcolor="#deb618"];
-user_2	 [label=H name="Lorg/viyk/demoappjava/MainActivity;",
+api_2	 [label="Activity" name="Landroid/app/Activity;",
+type=api shape=rect fillcolor="#deb618"];
+user_2	 [label="MainActivity" name="Lorg/viyk/demoappjava/MainActivity;",
 type=user fillcolor="#18b0de"];
 api_2 -> user_2	 [type=api_parent_of style=dashed color=blue];
-api_3	 [label=I name="Ljava/lang/Boolean;",
-type=api shape=diamond fillcolor="#deb618"];
-user_3	 [label=J name="Lorg/viyk/demoappjava/BuildConfig;",
-type=user fillcolor="#18b0de"];
 
-api_4	 [label=K name="Ljava/lang/Object;",
-type=api shape=diamond fillcolor="#deb618"];
+api_4	 [label="Object" name="Ljava/lang/Object;",
+type=api shape=rect fillcolor="#deb618"];
 
 
-api_5	 [label=L name="Landroid/widget/TextView;",
-type=api shape=diamond fillcolor="#deb618"];
+api_5	 [label="TextView" name="Landroid/widget/TextView;",
+type=api shape=rect fillcolor="#deb618"];
 
 
-api_6	 [label=M name="Ljava/lang/String;",
-type=api shape=diamond fillcolor="#deb618"];
-
-api_7	 [label=N name="Ljava/lang/Double;",
-type=api shape=diamond fillcolor="#deb618"];
-
-api_8	 [label=P name="Landroid/location/Location;",
-type=api shape=diamond fillcolor="#deb618"];
+api_8	 [label="Location" name="Landroid/location/Location;",
+type=api shape=rect fillcolor="#deb618"];
 
 api_9 -> api_0	 [type=calls_back  color=red style=bold];
-permission_0	 [label=Q name="android.permission.ACCESS_COARSE_LOCATION",
-type=permission shape=square fillcolor="#ff73c4"];
+permission_0	 [label="ACCESS_COARSE_LOCATION" name="android.permission.ACCESS_COARSE_LOCATION",
+type=permission shape=underline ];
 api_9 -> permission_0	 [type=uses color="#007820"];
-permission_1	 [label=R name="android.permission.ACCESS_FINE_LOCATION",
-type=permission shape=square fillcolor="#ff73c4"];
+permission_1	 [label="ACCESS_FINE_LOCATION" name="android.permission.ACCESS_FINE_LOCATION",
+type=permission shape=underline ];
 api_9 -> permission_1	 [type=uses color="#007820"];
 
-api_10	 [label=S name="Ljava/lang/Exception;",
-type=api shape=diamond fillcolor="#deb618"];
 
 api_11 -> api_1	 [type=calls_back  color=red style=bold];
 
@@ -96,22 +83,17 @@ api_11 -> api_1	 [type=calls_back  color=red style=bold];
 
 user_0 -> api_4	 [type=invokes_api];
 user_0 -> api_5	 [type=invokes_api];
-user_0 -> api_6	 [type=invokes_api];
-user_0 -> api_7	 [type=invokes_api];
 user_0 -> api_8	 [type=invokes_api];
 user_0 -> user_2	 [type=invokes];
 
 user_1 -> api_4	 [type=invokes_api];
 user_1 -> api_5	 [type=invokes_api];
 user_1 -> api_9	 [type=invokes_api];
-user_1 -> api_10	 [type=invokes_api];
+
 user_1 -> user_2	 [type=invokes];
 
 user_2 -> api_11	 [type=invokes_api];
 user_2 -> user_0	 [type=invokes];
 user_2 -> user_1	 [type=invokes];
 user_2 -> user_2	 [type=invokes];
-user_3 -> api_3	 [type=invokes_api];
-user_3 -> api_4	 [type=invokes_api];
-
 

@@ -1,0 +1,41 @@
+\begin{table}[h]
+\scriptsize
+\caption{Node labels to name mappings of Caller-Callee graphs in Figure \ref{fig:fcg}, Figure \ref{fig:efcg} and Figure \ref{fig:refcg}. Only the nodes whose name begin with \texttt{Lorg/user} are internal. The classes \texttt{MainActivity\$1} and \texttt{MainActivity\$2} correspond to anonymous nested class of \texttt{MainActivity} defined in Figure \ref{fig:code} in line 5-16 and line 18-36, respectively. \texttt{access\$*} methods are compiler-generated and used for permission check in line 22 of Figure \ref{fig:code}. }
+\begin{tabular}{@{}p{0.1\linewidth}p{0.7\linewidth}p{0.1\linewidth}@{}}
+\toprule
+(e-)FCG Node & Method Name                                                        & R-eFCG Node \\ \midrule
+00                               & \texttt{Landroid/location/LocationListener; onLocationChanged}     & A           \\
+01                               & \texttt{Landroid/view/View\$OnClickListener; onClick}               & D           \\
+02                               & \texttt{Landroid/app/Activity; <init>}                             & G           \\
+03                               & \texttt{Landroid/app/Activity; onCreate}                           & G           \\
+04                               & \texttt{Ljava/lang/Boolean; parseBoolean}                          & I           \\
+05                               & \texttt{Ljava/lang/Object; <init>}                                 & K           \\
+06                               & \texttt{Landroid/widget/TextView; setText}                         & L           \\
+07                               & \texttt{Ljava/lang/String; format}                                 & M           \\
+08                               & \texttt{Ljava/lang/Double; valueOf}                                & N           \\
+09                               & \texttt{Landroid/location/Location; getLongitude}                  & P           \\
+10                               & \texttt{Landroid/location/Location; getLatitude}                   & P           \\
+11                               & \texttt{Lorg/user/demoappjava/MainActivity; checkSelfPermission}   & H           \\
+12                               & \texttt{Ljava/lang/Exception; toString}                            & S           \\
+13                               & \texttt{Landroid/location/LocationManager; requestLocationUpdates} & B           \\
+14                               & \texttt{Lorg/user/demoappjava/MainActivity; setContentView}        & H           \\
+15                               & \texttt{Lorg/user/demoappjava/MainActivity; getSystemService}      & H           \\
+16                               & \texttt{Lorg/user/demoappjava/MainActivity; findViewById}          & H           \\
+17                               & \texttt{Landroid/widget/Button; setOnClickListener}                & E           \\
+18                               & \texttt{Landroid/location/LocationListener; onProviderDisabled}    & A           \\
+19                               & \texttt{Landroid/location/LocationListener; onProviderEnabled}     & A           \\
+20                               & \texttt{Lorg/user/demoappjava/MainActivity\$1; onLocationChanged}   & C           \\
+21                               & \texttt{Lorg/user/demoappjava/MainActivity; access\$000}            & H           \\
+22                               & \texttt{Lorg/user/demoappjava/MainActivity\$2; onClick}             & F           \\
+23                               & \texttt{Lorg/user/demoappjava/MainActivity; access\$200}            & H           \\
+24                               & \texttt{Lorg/user/demoappjava/MainActivity; <init>}                & H           \\
+25                               & \texttt{Lorg/user/demoappjava/MainActivity\$1; <init>}              & C           \\
+26                               & \texttt{Lorg/user/demoappjava/MainActivity\$2; <init>}              & F           \\
+27                               & \texttt{Lorg/user/demoappjava/MainActivity; onCreate}              & H           \\
+28                               & \texttt{Lorg/user/demoappjava/BuildConfig; <clinit>}               & J           \\
+29                               & \texttt{Lorg/user/demoappjava/BuildConfig; <init>}                 & J           \\
+30                               & \texttt{Lorg/user/demoappjava/MainActivity; access\$100}            & H           \\
+31                               & \texttt{permission.ACCESS\_COARSE\_LOCATION}                         & Q           \\
+32                               & \texttt{permission.ACCESS\_FINE\_LOCATION}                           & R           \\ \bottomrule
+\end{tabular}
+\end{table}

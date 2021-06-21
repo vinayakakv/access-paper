@@ -1,0 +1,43 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[h]
+\scriptsize
+\caption{Summary of the notations}
+\label{tab:notations}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Notation}            & \textbf{Meaning}                                                \\ \midrule
+\multicolumn{2}{l}{\textbf{Heterogeneous Graphs}}                                              \\
+$\mathcal{V}$                & Set of node types.                                              \\
+$\tau$                       & A node type, $\tau\in\mathcal{V}$.                              \\
+$\mathcal{E}$                & Set of edge types.                                              \\
+$t$                          & An edge type, $t\in\mathcal{E}$.                                \\
+$V_\tau$                     & Set of nodes with type $\tau$.                                  \\
+$V$                          & Set of all nodes.                                               \\
+$E_t$                        & Set of edges with type $t$.                                     \\
+$E$                          & Set of all edges.                                               \\
+$G_M$                        & Metagraph of the heterogeneous graph $G$.                       \\
+$A_\tau$                     & Attribute function for node type $\tau$.                        \\
+$\mathbb{A_}\tau$            & Attribute space of the node type $\tau$.                        \\
+\multicolumn{2}{l}{\textbf{Neighbourhood of node $v$ in the graph $G$ with node type $\tau$.}}                                           \\
+$\{\mathrm{parents}_\tau\}_G(v)$  & Set of parents of the node.          \\
+$\{\mathrm{children}_\tau\}_G(v)$ & Set of children of the node.         \\
+$\{\mathcal{N}_\tau\}_G(v)$       & Set of 1-hop neighbours of the node. \\
+$\mathrm{pred}_G(v)$         & Set of predecessors of node $v$ in a DAG $G$.                   \\
+$\mathrm{succ}_G(v)$         & Set of successors of node $v$ in a DAG $G$.                     \\
+\multicolumn{2}{l}{\textbf{The \textt{dex code}}}                                              \\
+$\mathcal{C}$                & Set of classes defined and referenced in the \texttt{dex code}. \\
+$\mathcal{M}$                & Set of methods defined and referenced in the \texttt{dex code}. \\
+$\mathrm{is}F(\cdot)$             & Is the flag $F$ is present in the definition of its argument.    \\
+$\mathrm{methods}(c)$        & Set of methods of the class $c$.                                \\
+$\mathrm{class\_parents(c)}$ & Set of parent classes of the class $c$.                         \\
+$\mathrm{constructors}(c)$   & Set of constructors of the class $c$.                           \\
+$\mathrm{argumentTypes}(m)$  & Set of arguments of the method $m$.                             \\
+$\mathrm{class}(m)$          & The class to which the method $m$ belongs to.                   \\
+$\mathrm{sig}(m)$            & Signature of the method $m$.                                    \\
+$\Gamma$                     & The FCG.                                                        \\
+$\mathcal{I}$                & The Inheritance Graph.                                          \\
+$(\cdot)^{(\mathsf{M})}$         & Method-level graphs and edges.                                  \\
+$(\cdot)^{(\mathsf{C})}$         & Class-level graphs and edges.                                   \\ \bottomrule
+\end{tabular}
+\end{table}
